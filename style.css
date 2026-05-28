@@ -29,7 +29,7 @@ game {
     justify-content: space-between;
     width: 100%;
     max-width: 600px;
-    height: 95vh; /* Ocupa quase toda a altura da tela */
+    height: 95dvh; /* Ocupa quase toda a altura da tela */
     padding: 10px;
     box-sizing: border-box;
 }
