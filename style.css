@@ -1,0 +1,145 @@
+/* Importando uma fonte moderna e limpa */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+:root {
+    --bg-color: #fdfaf6;
+    --text-color: #5a5a5a;
+    --accent-pastel: #d4e4bc; /* Verde pastel */
+    --key-bg: #e2e8f0;
+    --key-text: #4a5568;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Impede o scroll */
+    transition: background-color 0.3s ease;
+}
+
+game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    height: 95vh; /* Ocupa quase toda a altura da tela */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Header e Título */
+header {
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #a8dadc; /* Azul pastel */
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+}
+
+attempt {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+/* Área da Dica/Explicação */
+explanation {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.4;
+    box-shadow: var(--shadow);
+    width: 90%;
+    max-height: 15vh;
+    overflow-y: auto;
+    border-left: 5px solid var(--accent-pastel);
+}
+
+/* Display da Palavra Atual */
+currentATMPT {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 10px;
+    color: #4a4a4a;
+    margin: 20px 0;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* Teclado Virtual */
+keybd {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+keybd > first, keybd > second, keybd > third {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+}
+
+button {
+    background-color: var(--key-bg);
+    border: none;
+    border-radius: 6px;
+    color: var(--key-text);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: 600;
+    height: 58px;
+    flex: 1; /* Faz os botões crescerem igualmente */
+    max-width: 45px;
+    transition: transform 0.1s, background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:active {
+    transform: scale(0.95);
+    background-color: #cbd5e0;
+}
+
+/* Ajustes para botões especiais */
+button[style*="width"] {
+    max-width: none !important; /* Sobrescreve para botões de texto longo */
+    background-color: #f1f5f9;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 480px) {
+    .title { font-size: 1.8rem; }
+    
+    currentATMPT {
+        font-size: 2rem;
+        letter-spacing: 6px;
+    }
+
+    explanation { font-size: 0.85rem; }
+
+    button {
+        height: 50px;
+        font-size: 0.9rem;
+    }
+    
+    keybd { gap: 6px; }
+}

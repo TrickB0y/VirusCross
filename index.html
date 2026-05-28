@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VirusCross</title>
+    <link rel="stylesheet" href="Reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="\script.js" defer></script>
+    
+</head>
+<body>
+    <game>
+        <header><h1 class="title">VirusCross</h1></header>
+        <attempt>
+            <p id="acertos">Acertos: 0</p>
+            <p id="erros">Erros: 0</p>
+        </attempt>
+        <currentATMPT id="currentAttempt"></currentATMPT>
+        <explanation id="wordExplanation"></explanation>
+        <keybd>
+            <first>
+                <button onclick="digitado('KeyQ');">Q</button>
+                <button onclick="digitado('KeyW');">W</button>
+                <button onclick="digitado('KeyE');">E</button>
+                <button onclick="digitado('KeyR');">R</button>
+                <button onclick="digitado('KeyT');">T</button>
+                <button onclick="digitado('KeyY');">Y</button>
+                <button onclick="digitado('KeyU');">U</button>
+                <button onclick="digitado('KeyI');">I</button>
+                <button onclick="digitado('KeyO');">O</button>
+                <button onclick="digitado('KeyP');">P</button>
+            </first>
+            <second>
+                <button onclick="digitado('KeyA');">A</button>
+                <button onclick="digitado('KeyS');">S</button>
+                <button onclick="digitado('KeyD');">D</button>
+                <button onclick="digitado('KeyF');">F</button>
+                <button onclick="digitado('KeyG');">G</button>
+                <button onclick="digitado('KeyH');">H</button>
+                <button onclick="digitado('KeyJ');">J</button>
+                <button onclick="digitado('KeyK');">K</button>
+                <button onclick="digitado('KeyL');">L</button>
+                <button onclick="digitado('Backspace');" style="margin-left: 1%; width: 13%; font-size: 100%;">APAGAR</button>
+            </second>
+            <third>
+                <button onclick="digitado('KeyZ');">Z</button>
+                <button onclick="digitado('KeyX');">X</button>
+                <button onclick="digitado('KeyC');">C</button>
+                <button onclick="digitado('KeyV');">V</button>
+                <button onclick="digitado('KeyB');">B</button>
+                <button onclick="digitado('KeyN');">N</button>
+                <button onclick="digitado('KeyM');">M</button>
+                <button onclick="digitado('Enter');" style="margin-left: 1%; width: 13%;">ENVIAR</button>
+            </third>
+        </keybd>
+    </game>
+    
+</body>
+</html>
