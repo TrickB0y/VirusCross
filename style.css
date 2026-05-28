@@ -87,6 +87,7 @@ keybd {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    margin-bottom: 8%;
 }
 
 keybd > first, keybd > second, keybd > third {
